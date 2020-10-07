@@ -3,16 +3,16 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full bg-white shadow-md p-15 pb-30 mt-15 md:mt-25 md:pt-15 md:px-25 md:sticky mx-auto max-w-6xl xl:px-80 z-10 top-0">
-      <div className="flex items-center">
-        <div className="font-medium text-18 md:text-34 text-black pl-5 md:pl-20 pr-15 md:pr-40">
+    <header className="w-full py-15 px-30 md:pt-35 md:px-25 mx-auto max-w-1000 xl:px-80">
+      <div className="flex items-center justify-center text-14 md:text-20 border-b">
+        <div className="flex font-bold pr-15 md:pr-40 mr-auto">
           <Link href="/">
             <a className="transition duration-300 ease-in-out hover:text-lightblue">
-              Portfolio
+              Cuong Nguyen
             </a>
           </Link>
         </div>
-        <ul className="flex mr-auto text-14 md:text-20 items-left">
+        <ul className="flex py-10">
           <li className="mr-15 pl-5 md:mr-30 transition duration-300 ease-in-out hover:text-lightblue">
             <Link href="/blog">
               <a>Blog</a>
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
               <a>Projects</a>
             </Link>
           </li>
-          <li className="mr-15 pl-5 md:mr-30 transition duration-300 ease-in-out hover:text-lightblue">
+          <li className="pl-5 transition duration-300 ease-in-out hover:text-lightblue">
             <Link href="/contact">
               <a>Contact</a>
             </Link>
