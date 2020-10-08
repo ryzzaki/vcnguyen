@@ -113,7 +113,7 @@ const TechStackList: React.FC = () => (
     <ul className="flex flex-row flex-wrap justify-center items-center">
       {stacks.map((stack) => {
         return (
-          <li key={stack.alt} className="flex p-20">
+          <li key={stack.alt} className="flex p-10 md:p-20">
             <Link href={stack.link}>
               <a
                 target="_blank"

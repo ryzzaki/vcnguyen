@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
-import MetaData from '../MetaData';
-import Header from '../Header';
-import Footer from '../Footer';
+import MetaData from '../layout/MetaData';
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';
 
 type ContainerProps = {
   children?: ReactNode;

@@ -1,12 +1,17 @@
 import Link from 'next/link';
 import React from 'react';
-import { DXH, Qmul } from '../assets/icons';
+import { Applifting, DXH, Qmul } from '../assets/icons';
 
 const organizations = [
   {
     icon: <Qmul />,
     link: 'https://www.qmul.ac.uk/',
     alt: 'Queen Mary, University of London',
+  },
+  {
+    icon: <Applifting className="text-white fill-current" />,
+    link: 'https://applifting.io/',
+    alt: 'Applifting | Software House',
   },
   {
     icon: <DXH />,

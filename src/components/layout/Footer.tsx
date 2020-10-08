@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => (
   <footer className="flex flex-col text-center items-center w-full font-roboto py-25 px-10">
-    <div className="font-semibold text-white text-18">
+    <div className="font-semibold text-white text-14">
       Wow you made it to the very end 😮
     </div>
-    <div className="text-lightgrey hover:text-lightblue transition duration-300 ease-in-out">
+    <div className="text-lightgrey text-14 hover:text-lightblue transition duration-300 ease-in-out">
       <Link href="https://www.instagram.com/cng_ng/">
         <a>@cng_ng</a>
       </Link>
