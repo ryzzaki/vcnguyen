@@ -12,7 +12,7 @@ type ContainerProps = {
 
 const MainContainer: React.FC<ContainerProps> = ({
   children,
-  title = 'Portfolio',
+  title = 'Cuong Nguyen',
   theme = 'light',
   toggleNav = true,
 }: ContainerProps) => (

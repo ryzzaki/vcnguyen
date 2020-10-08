@@ -28,7 +28,7 @@ const IndexPage: React.FC = () => {
   }, []);
 
   return (
-    <MainContainer title="Portfolio" theme="dark">
+    <MainContainer title="Portfolio & Blog | Cuong Nguyen" theme="dark">
       <div className="flex flex-col items-left mx-auto">
         <section className="py-20 my-20">
           <div className="font-semibold py-10 text-24 md:text-32">

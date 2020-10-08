@@ -4,7 +4,7 @@ import React from 'react';
 import ContactList from '../components/ContactList';
 
 const ContactPage: React.FC = () => (
-  <MainContainer title="Portfolio" theme="dark">
+  <MainContainer title="Contact | Cuong Nguyen" theme="dark">
     <div className="flex flex-col items-left mx-auto">
       <section className="py-20">
         <div className="font-semibold py-10 text-24 md:text-32">

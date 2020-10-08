@@ -5,6 +5,7 @@ import { PrismicClient } from '../api/prismic';
 import PostLoader from '../../components/PostLoader';
 import BlogPost from '../../components/BlogPost';
 import { Document as DataDoc } from 'prismic-javascript/types/documents';
+import { RichText } from 'prismic-reactjs';
 
 const BlogPostPage = () => {
   const router = useRouter();
@@ -22,7 +23,10 @@ const BlogPostPage = () => {
   }, [id]);
 
   return (
-    <MainContainer title="Portfolio" theme="dark">
+    <MainContainer
+      title={`${RichText.asText(post?.data.title) ?? ''} | Cuong Nguyen`}
+      theme="dark"
+    >
       <div className="flex flex-col md:flex-row py-5">
         {post ? (
           <BlogPost

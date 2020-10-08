@@ -8,7 +8,7 @@ const Footer: React.FC = () => (
     </div>
     <div className="text-lightgrey text-14 hover:text-lightblue transition duration-300 ease-in-out">
       <Link href="https://www.instagram.com/cng_ng/">
-        <a>@cng_ng</a>
+        <a target="_blank">@cng_ng</a>
       </Link>
     </div>
     <div className="p-15 md:p-0 mt-10 md:mt-0 text-lightgrey text-10">
