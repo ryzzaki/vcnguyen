@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const Footer: React.FC = () => (
-  <footer className="flex flex-col text-center items-center w-full font-roboto py-25 px-10">
+  <footer className="flex flex-col bg-mirage text-center items-center w-full font-roboto py-25 px-10">
     <div className="font-semibold text-white text-14">
       Wow you made it to the very end 😮
     </div>

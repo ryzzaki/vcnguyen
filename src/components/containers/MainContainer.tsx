@@ -13,13 +13,13 @@ type ContainerProps = {
 const MainContainer: React.FC<ContainerProps> = ({
   children,
   title = 'Cuong Nguyen',
-  theme = 'light',
+  theme = 'dark',
   toggleNav = true,
 }: ContainerProps) => (
   <div
-    className={`font-roboto text-verylightgrey bg-${
-      theme === 'light' ? 'white' : 'mirage'
-    }`}
+    className={`font-roboto text-${
+      theme === 'light' ? 'black' : 'verylightgrey'
+    } bg-${theme === 'light' ? 'white' : 'mirage'}`}
   >
     <MetaData title={title} />
     {toggleNav && <Header />}
