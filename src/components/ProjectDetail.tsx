@@ -46,7 +46,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
         alt={thumbnail.alt ?? 'Project Thumbnail'}
         width={thumbnail.dimensions.width}
         height={thumbnail.dimensions.height}
-        className="object-cover"
       />
     </div>
     <div className="break-words">
