@@ -2,7 +2,10 @@ const purgecss =
   process.env.NODE_ENV === 'production'
     ? {
         '@fullhuman/postcss-purgecss': {
-          content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
+          content: [
+            './src/pages/**/*.{ts,tsx}',
+            './src/components/**/*.{ts,tsx}',
+          ],
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
           whitelist: ['html', 'body'],
         },
