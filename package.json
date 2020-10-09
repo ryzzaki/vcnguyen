@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development yarn watch:css && next",
     "build": "rimraf ./build && yarn build:css && next build",
-    "start": "NODE_ENV=production next start",
+    "start": "NODE_ENV=production next start -p $PORT",
     "type-check": "tsc",
     "build:css": "postcss ./src/assets/styles/tailwind.css -o ./src/assets/styles/main.css",
     "watch:css": "postcss ./src/assets/styles/tailwind.css -o ./src/assets/styles/main.css"
