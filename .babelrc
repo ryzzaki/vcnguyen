@@ -1,4 +1,30 @@
 {
   "presets": [["next/babel"]],
-  "plugins": [["inline-react-svg"]]
+  "plugins": [
+    ["inline-react-svg"],
+    [
+      "prismjs",
+      {
+        "languages": [
+          "typescript",
+          "javascript",
+          "python",
+          "java",
+          "bash",
+          "docker",
+          "yaml",
+          "markdown",
+          "jsx",
+          "tsx",
+          "sql",
+          "json",
+          "xml",
+          "css",
+          "markup"
+        ],
+        "plugins": ["line-numbers"],
+        "css": false
+      }
+    ]
+  ]
 }

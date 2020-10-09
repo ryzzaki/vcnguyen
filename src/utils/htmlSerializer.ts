@@ -68,7 +68,7 @@ export const htmlSerializer = (
     case Elements.preformatted: // Preformatted
       return React.createElement(
         'pre',
-        propsWithUniqueKey({ className: 'bg-black' }, key),
+        propsWithUniqueKey(props, key),
         children
       );
 

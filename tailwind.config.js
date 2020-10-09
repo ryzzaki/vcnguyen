@@ -130,6 +130,7 @@ module.exports = {
       verylightgrey: '#edf2f6',
       mirage: '#1a202c',
       lightblue: '#0063b5',
+      darkgrey: '#2d2d2d',
     },
     fontSize: sizes,
     fontFamily: {

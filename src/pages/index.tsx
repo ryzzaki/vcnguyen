@@ -3,15 +3,15 @@ import React, { useEffect, useState } from 'react';
 import TechStackList from '../components/TechStackList';
 import OrganizationList from '../components/OrganizationList';
 import { PrismicClient } from './api/prismic';
-import { RichText } from 'prismic-reactjs';
+import { RichText, RichTextBlock } from 'prismic-reactjs';
 import BodyText from '../components/slices/BodyText';
 
 const IndexPage: React.FC = () => {
   const [data, setData] = useState({
-    intro_title: [],
-    intro_description: [],
-    techstack_title: [],
-    organizations_title: [],
+    intro_title: [] as RichTextBlock[],
+    intro_description: [] as RichTextBlock[],
+    techstack_title: [] as RichTextBlock[],
+    organizations_title: [] as RichTextBlock[],
   });
 
   useEffect(() => {

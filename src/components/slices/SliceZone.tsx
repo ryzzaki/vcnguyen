@@ -1,6 +1,8 @@
 import React from 'react';
 import BodyText from './BodyText';
+import CodeSnippet from './CodeSnippet';
 
+// @To-do: improve this type
 type SliceZoneProps = {
   body: {
     slice_type: 'code' | 'rich_text';
@@ -15,9 +17,10 @@ const SliceZone: React.FC<SliceZoneProps> = ({ body }: SliceZoneProps) => (
         switch (content.slice_type) {
           case 'code':
             return (
-              <code key={i}>
-                {content.items?.pop()?.code_slice?.pop()?.text}
-              </code>
+              <CodeSnippet
+                key={i}
+                markdownContent={content.items?.pop()?.code_slice?.pop()?.text}
+              />
             );
           case 'rich_text':
             return <BodyText key={i} text={content.items?.pop()?.text_slice} />;
