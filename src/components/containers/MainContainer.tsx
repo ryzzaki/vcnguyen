@@ -17,9 +17,9 @@ const MainContainer: React.FC<ContainerProps> = ({
   toggleNav = true,
 }: ContainerProps) => (
   <div
-    className={`font-roboto text-${
-      theme === 'light' ? 'black' : 'verylightgrey'
-    } bg-${theme === 'light' ? 'white' : 'mirage'}`}
+    className={`font-roboto text-verylightgrey bg-${
+      theme === 'light' ? 'white' : 'mirage'
+    }`}
   >
     <MetaData title={title} />
     {toggleNav && <Header />}
