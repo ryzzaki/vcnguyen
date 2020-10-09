@@ -4,31 +4,40 @@ import BodyText from './slices/BodyText';
 import { ArrowRight } from '../assets/icons';
 import { useRouter } from 'next/dist/client/router';
 
-type PostPreviewProps = {
+type ProjectPreviewProps = {
   id: string;
   uid: string | undefined;
   title: RichTextBlock[];
+  thumbnail: {
+    url: string;
+    alt?: string;
+    dimensions: {
+      width: number;
+      height: number;
+    };
+  };
   description: RichTextBlock[];
-  dateCreated: Date;
+  projectInit: Date;
 };
 
-const PostPreview: React.FC<PostPreviewProps> = ({
+const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   id,
   uid,
   title,
+  thumbnail,
   description,
-  dateCreated,
-}: PostPreviewProps) => {
+  projectInit,
+}: ProjectPreviewProps) => {
   const router = useRouter();
 
   const handleClick = (id: string) => {
-    router.push(`/blog/${id}`);
+    router.push(`/project/${id}`);
   };
 
   return (
     <div
       key={id}
-      className="flex flex-col shadow-lg pt-10 mb-10 px-10 hover:bg-verylightgrey hover:bg-opacity-25 cursor-auto rounded transition duration-300 ease-in-out"
+      className="flex flex-col shadow-lg py-20 mb-10 px-10 hover:bg-verylightgrey hover:bg-opacity-25 cursor-auto rounded transition duration-300 ease-in-out"
     >
       <div className="flex flex-col md:flex-row py-5">
         <span
@@ -38,8 +47,16 @@ const PostPreview: React.FC<PostPreviewProps> = ({
           <RichText render={title} />
         </span>
         <span className="md:ml-auto text-14 text-lightgrey">
-          {new Date(dateCreated).toUTCString()}
+          Created on {new Date(projectInit).toUTCString()}
         </span>
+      </div>
+      <div className="flex py-5 justify-center">
+        <img
+          src={thumbnail.url}
+          alt={thumbnail.alt ?? 'Project Thumbnail'}
+          width={thumbnail.dimensions.width}
+          height={thumbnail.dimensions.height}
+        />
       </div>
       <div className="py-5">
         <BodyText text={description} />
@@ -55,4 +72,4 @@ const PostPreview: React.FC<PostPreviewProps> = ({
   );
 };
 
-export default PostPreview;
+export default ProjectPreview;

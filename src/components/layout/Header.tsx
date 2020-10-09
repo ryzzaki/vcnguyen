@@ -23,7 +23,7 @@ const Header: React.FC = () => (
           </Link>
         </li>
         <li className="mr-15 pl-5 md:mr-30 transition duration-300 ease-in-out hover:text-lightblue">
-          <Link href="/projects">
+          <Link href="/project">
             <a className="flex flex-row items-center">
               <Terminal className="mr-5" />
               Projects

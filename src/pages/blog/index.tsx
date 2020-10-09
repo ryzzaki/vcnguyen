@@ -10,7 +10,13 @@ const BlogPage: React.FC = () => {
   useEffect(() => {
     const client = PrismicClient();
     client.query(PrismicQuery('blog_post')).then((res) => {
-      setData(res.results);
+      setData(
+        res.results.sort(
+          (a, b) =>
+            new Date(b.data.created_at).getTime() -
+            new Date(a.data.created_at).getTime()
+        )
+      );
     });
   }, []);
 

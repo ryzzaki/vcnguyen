@@ -3,37 +3,42 @@ import { useRouter } from 'next/router';
 import MainContainer from '../../components/containers/MainContainer';
 import { PrismicClient } from '../api/prismic';
 import PostLoader from '../../components/PostLoader';
-import BlogPost from '../../components/BlogPost';
+import ProjectDetail from '../../components/ProjectDetail';
 import { Document as DataDoc } from 'prismic-javascript/types/documents';
 import { RichText } from 'prismic-reactjs';
 
-const BlogPostPage = () => {
+const ProjectDetailPage = () => {
   const router = useRouter();
   const { id } = router.query;
   // retype this from DataDoc to custom interface later
-  const [post, setPost] = useState<DataDoc>();
+  const [project, setProject] = useState<DataDoc>();
 
   useEffect(() => {
     if (id) {
       const client = PrismicClient();
-      client.getByUID('blog_post', id as string, {}).then((res) => {
-        setPost(res);
+      client.getByUID('project_post', id as string, {}).then((res) => {
+        setProject(res);
       });
     }
   }, [id]);
 
   return (
     <MainContainer
-      title={`${RichText.asText(post?.data.title) ?? 'Blog'} | Cuong Nguyen`}
+      title={`${
+        RichText.asText(project?.data.title) ?? 'Portfolio'
+      } | Cuong Nguyen`}
       theme="dark"
     >
       <div className="flex flex-col md:flex-row py-5">
-        {post ? (
-          <BlogPost
-            title={post?.data.title}
-            description={post?.data.description}
-            dateCreated={post?.data.created_at}
-            body={post?.data.body}
+        {project ? (
+          <ProjectDetail
+            title={project?.data.title}
+            thumbnail={project?.data.project_thumbnail}
+            description={project?.data.description}
+            projectInit={project?.data.project_init}
+            dateCreated={project?.data.created_at}
+            projectUrl={project?.data.project_url}
+            body={project?.data.body}
           />
         ) : (
           <PostLoader />
@@ -43,4 +48,4 @@ const BlogPostPage = () => {
   );
 };
 
-export default BlogPostPage;
+export default ProjectDetailPage;

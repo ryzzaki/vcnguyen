@@ -26,7 +26,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
     <div>
       <BodyText text={description} />
     </div>
-    <div>{dateCreated}</div>
+    <div>Posted on {new Date(dateCreated).toUTCString()}</div>
     <div>
       <SliceZone body={body} />
     </div>
