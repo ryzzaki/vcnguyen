@@ -56,7 +56,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           alt={thumbnail.alt ?? 'Project Thumbnail'}
           width={thumbnail.dimensions.width}
           height={thumbnail.dimensions.height}
-          className={`w-full h-200 md:h-${thumbnail.dimensions.height}`}
+          className="w-full object-cover h-200 md:object-none md:h-full"
         />
       </div>
       <div className="py-5 break-words">
