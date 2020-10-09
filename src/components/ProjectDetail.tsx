@@ -36,19 +36,20 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
   projectUrl,
   body,
 }: ProjectDetailProps) => (
-  <div className="py-20">
+  <div className="py-20 w-full">
     <div className="font-bold text-32">
       <RichText render={title} />
     </div>
-    <div className="flex justify-center">
+    <div className="flex justify-center py-10">
       <img
         src={thumbnail.url}
         alt={thumbnail.alt ?? 'Project Thumbnail'}
         width={thumbnail.dimensions.width}
         height={thumbnail.dimensions.height}
+        className="object-cover"
       />
     </div>
-    <div>
+    <div className="break-words">
       <BodyText text={description} />
     </div>
     <div className="flex flex-row">

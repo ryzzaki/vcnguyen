@@ -23,7 +23,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
     <div className="font-bold text-32">
       <RichText render={title} />
     </div>
-    <div>
+    <div className="break-words">
       <BodyText text={description} />
     </div>
     <div>Posted on {new Date(dateCreated).toUTCString()}</div>

@@ -39,7 +39,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <MainContainer title="Projects | Cuong Nguyen" theme="dark">
-      <div className="flex flex-col items-left mx-auto">
+      <div className="flex flex-col items-left">
         <section className="py-20 my-20">
           <div className="font-semibold py-10 text-24 md:text-32">
             <RichText render={pageData.intro_title} />

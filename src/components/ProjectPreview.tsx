@@ -56,9 +56,10 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           alt={thumbnail.alt ?? 'Project Thumbnail'}
           width={thumbnail.dimensions.width}
           height={thumbnail.dimensions.height}
+          className="object-cover"
         />
       </div>
-      <div className="py-5">
+      <div className="py-5 break-words">
         <BodyText text={description} />
         <div
           className="flex flex-row justify-end font-semibold cursor-pointer"
