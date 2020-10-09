@@ -47,7 +47,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           <RichText render={title} />
         </span>
         <span className="md:ml-auto text-14 text-lightgrey">
-          Created on {new Date(projectInit).toUTCString()}
+          Created on {new Date(projectInit).toDateString()}
         </span>
       </div>
       <div className="flex py-5 justify-center">
@@ -56,7 +56,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           alt={thumbnail.alt ?? 'Project Thumbnail'}
           width={thumbnail.dimensions.width}
           height={thumbnail.dimensions.height}
-          className={`object-cover w-full h-200 md:h-${thumbnail.dimensions.height}`}
+          className={`object-cover w-full sm:h-200 md:h-${thumbnail.dimensions.height}`}
         />
       </div>
       <div className="py-5 break-words">

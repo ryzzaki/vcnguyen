@@ -38,7 +38,7 @@ const PostPreview: React.FC<PostPreviewProps> = ({
           <RichText render={title} />
         </span>
         <span className="md:ml-auto text-14 text-lightgrey">
-          {new Date(dateCreated).toUTCString()}
+          {new Date(dateCreated).toDateString()}
         </span>
       </div>
       <div className="py-5">

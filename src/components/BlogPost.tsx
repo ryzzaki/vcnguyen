@@ -26,7 +26,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
     <div className="break-words">
       <BodyText text={description} />
     </div>
-    <div>Posted on {new Date(dateCreated).toUTCString()}</div>
+    <div>Posted on {new Date(dateCreated).toDateString()}</div>
     <div>
       <SliceZone body={body} />
     </div>

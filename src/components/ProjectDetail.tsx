@@ -46,7 +46,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
         alt={thumbnail.alt ?? 'Project Thumbnail'}
         width={thumbnail.dimensions.width}
         height={thumbnail.dimensions.height}
-        className={`object-cover w-full h-200 md:h-${thumbnail.dimensions.height}`}
+        className={`object-cover w-full sm:h-200 md:h-${thumbnail.dimensions.height}`}
       />
     </div>
     <div className="break-words">
@@ -54,10 +54,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
     </div>
     <div className="flex flex-row">
       <div className="mr-auto">
-        Posted on {new Date(dateCreated).toUTCString()}
+        Posted on {new Date(dateCreated).toDateString()}
       </div>
       <div className="ml-auto">
-        Created on {new Date(projectInit).toUTCString()}
+        Created on {new Date(projectInit).toDateString()}
       </div>
     </div>
     <div className="py-10 font-semibold">
