@@ -1,3 +1,5 @@
+const whitelister = require('purgecss-whitelister');
+
 const purgecss =
   process.env.NODE_ENV === 'production'
     ? {
@@ -8,7 +10,11 @@ const purgecss =
             './src/utils/**/*.{ts,tsx}',
           ],
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-          whitelist: ['html', 'body'],
+          whitelist: [
+            'html',
+            'body',
+            ...whitelister('./node_modules/prismjs/themes/prism-tomorrow.css'),
+          ],
         },
       }
     : {};

@@ -41,6 +41,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.0.2",
+    "purgecss-whitelister": "^2.4.0",
     "rimraf": "^3.0.2",
     "tailwindcss": "^1.8.10",
     "typescript": "4.0"
