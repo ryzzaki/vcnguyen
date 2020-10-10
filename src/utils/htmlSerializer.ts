@@ -43,7 +43,13 @@ export const htmlSerializer = (
     case Elements.heading2: // Heading 2
       return React.createElement(
         'h2',
-        propsWithUniqueKey(props, key),
+        propsWithUniqueKey(
+          {
+            className:
+              'font-heading text-center md:text-left pb-10 pt-30 text-20 md:text-32',
+          },
+          key
+        ),
         children
       );
 

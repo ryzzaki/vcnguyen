@@ -13,7 +13,7 @@ type SliceZoneProps = {
 const SliceZone: React.FC<SliceZoneProps> = ({ body }: SliceZoneProps) => (
   <>
     {body &&
-      body.map((content: any, i: any) => {
+      body.map((content: any, i: number) => {
         switch (content.slice_type) {
           case 'code':
             return (
@@ -23,7 +23,14 @@ const SliceZone: React.FC<SliceZoneProps> = ({ body }: SliceZoneProps) => (
               />
             );
           case 'rich_text':
-            return <BodyText key={i} text={content.primary.text_slice} />;
+            return (
+              <div key={i}>
+                {content.primary.paragraph_title.length > 0 && (
+                  <BodyText text={content.primary.paragraph_title} />
+                )}
+                <BodyText text={content.primary.text_slice} />
+              </div>
+            );
           default:
             return null;
         }
