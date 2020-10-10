@@ -141,14 +141,13 @@ export const htmlSerializer = (
       const img = React.createElement('img', {
         src: element.url,
         alt: element.alt || '',
+        className: 'rounded-lg',
       });
       return React.createElement(
         'p',
         propsWithUniqueKey(
           {
-            className: `${[element.label || '', 'block-img'].join(
-              ' '
-            )} rounded-lg`,
+            className: `${[element.label || '', 'block-img'].join(' ')} py-5`,
           },
           key
         ),
