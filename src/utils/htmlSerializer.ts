@@ -145,7 +145,11 @@ export const htmlSerializer = (
       return React.createElement(
         'p',
         propsWithUniqueKey(
-          { className: [element.label || '', 'block-img'].join(' ') },
+          {
+            className: `${[element.label || '', 'block-img'].join(
+              ' '
+            )} rounded-lg`,
+          },
           key
         ),
         linkUrl
