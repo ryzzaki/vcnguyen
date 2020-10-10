@@ -200,7 +200,10 @@ export const htmlSerializer = (
       return React.createElement(
         'a',
         propsWithUniqueKey(
-          { className: 'font-semibold underline hover:text-lightblue' },
+          {
+            className:
+              'font-semibold underline hover:text-lightblue cursor-pointer transition duration-300 ease-in-out',
+          },
           key
         ),
         children
