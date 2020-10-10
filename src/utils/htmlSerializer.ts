@@ -211,7 +211,9 @@ export const htmlSerializer = (
         return React.createElement(
           'span',
           propsWithUniqueKey(
-            { className: 'inline rounded bg-darkgrey p-5 mx-2 my-1 text-14' },
+            {
+              className: 'inline rounded bg-darkgrey p-5 mx-2 py-2 text-14',
+            },
             key
           ),
           React.createElement(
@@ -235,7 +237,7 @@ export const htmlSerializer = (
           propsWithUniqueKey(
             {
               className:
-                'font-heading text-black p-3 mx-2 my-1 bg-white rounded',
+                'font-heading text-black p-3 mx-2 py-2 bg-white rounded',
             },
             key
           ),
