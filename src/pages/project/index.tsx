@@ -42,13 +42,13 @@ const ProjectsPage: React.FC = () => {
     <MainContainer title="Projects | Cuong Nguyen" theme="dark">
       <div className="flex flex-col items-left">
         <section className="py-20 my-20">
-          <HeadingTitle title={pageData.intro_title} />
+          <HeadingTitle title={pageData.intro_title} leftAlign={false} />
           <div className="py-10 text-18">
             <BodyText text={pageData.intro_description} />
           </div>
         </section>
         <section className="py-20 my-20">
-          <HeadingTitle title={pageData.projects_title} />
+          <HeadingTitle title={pageData.projects_title} leftAlign={false} />
           {projectData.map((project) => (
             <ProjectPreview
               key={project.id}

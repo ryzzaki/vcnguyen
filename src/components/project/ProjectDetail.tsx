@@ -62,7 +62,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
         Posted on {new Date(dateCreated).toDateString()}
       </div>
       <div className="text-12 md:text-14 md:pb-10 md:ml-auto">
-        Project Init on {new Date(projectInit).toDateString()}
+        First Commit on {new Date(projectInit).toDateString()}
       </div>
     </div>
     <div className="py-10 text-14 md:text-18 font-semibold">

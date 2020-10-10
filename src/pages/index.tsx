@@ -32,17 +32,17 @@ const IndexPage: React.FC = () => {
     <MainContainer title="Portfolio & Blog | Cuong Nguyen" theme="dark">
       <div className="flex flex-col items-left mx-auto">
         <section className="py-20 my-20">
-          <HeadingTitle title={data.intro_title} />
+          <HeadingTitle title={data.intro_title} leftAlign={false} />
           <div className="py-10 text-center md:text-left text-20 md:text-24">
             <BodyText text={data.intro_description} />
           </div>
         </section>
         <section className="pb-20 my-20">
-          <HeadingTitle title={data.techstack_title} />
+          <HeadingTitle title={data.techstack_title} leftAlign={false} />
           <TechStackList />
         </section>
         <section className="pb-20 my-20">
-          <HeadingTitle title={data.organizations_title} />
+          <HeadingTitle title={data.organizations_title} leftAlign={false} />
           <OrganizationList />
         </section>
       </div>

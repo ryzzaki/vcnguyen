@@ -51,7 +51,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           <HeadingTitle title={title} />
         </span>
         <span className="md:ml-auto text-14 text-lightgrey">
-          Created on {new Date(projectInit).toDateString()}
+          First Commit on {new Date(projectInit).toDateString()}
         </span>
       </div>
       <div className="flex py-5 justify-center">

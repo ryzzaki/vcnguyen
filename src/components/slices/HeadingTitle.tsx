@@ -3,12 +3,18 @@ import { RichText, RichTextBlock } from 'prismic-reactjs';
 
 type HeadingTitleProps = {
   title: RichTextBlock[];
+  leftAlign?: boolean;
 };
 
 const HeadingTitle: React.FC<HeadingTitleProps> = ({
   title,
+  leftAlign = true,
 }: HeadingTitleProps) => (
-  <div className="font-heading text-center md:text-left py-10 text-24 md:text-36">
+  <div
+    className={`font-heading text-${
+      leftAlign ? 'left' : 'center'
+    } md:text-left py-10 text-24 md:text-36`}
+  >
     <RichText render={title} />
   </div>
 );

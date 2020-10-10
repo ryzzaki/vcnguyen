@@ -45,8 +45,7 @@ export const htmlSerializer = (
         'h2',
         propsWithUniqueKey(
           {
-            className:
-              'font-heading text-center md:text-left pb-10 pt-30 text-20 md:text-32',
+            className: 'font-heading text-left pb-10 pt-30 text-20 md:text-32',
           },
           key
         ),
@@ -185,7 +184,7 @@ export const htmlSerializer = (
         embedHtml
       );
 
-    case Elements.hyperlink: // Image
+    case Elements.hyperlink: // Hyperlink
       const targetAttr = element.data.target
         ? { target: element.data.target }
         : {};
@@ -198,14 +197,21 @@ export const htmlSerializer = (
         targetAttr,
         relAttr
       );
-      return React.createElement('a', propsWithUniqueKey(props, key), children);
+      return React.createElement(
+        'a',
+        propsWithUniqueKey(
+          { className: 'font-semibold underline hover:text-lightblue' },
+          key
+        ),
+        children
+      );
 
     case Elements.label: // Label
       if (codeInLine.includes(element.data.label)) {
         return React.createElement(
           'span',
           propsWithUniqueKey(
-            { className: 'inline rounded bg-darkgrey p-5 mx-2 text-14' },
+            { className: 'inline rounded bg-darkgrey p-5 mx-2 my-1 text-14' },
             key
           ),
           React.createElement(
@@ -228,7 +234,8 @@ export const htmlSerializer = (
           'span',
           propsWithUniqueKey(
             {
-              className: 'font-heading text-black p-3 mx-2 bg-white rounded',
+              className:
+                'font-heading text-black p-3 mx-2 my-1 bg-white rounded',
             },
             key
           ),

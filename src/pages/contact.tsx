@@ -29,11 +29,11 @@ const ContactPage: React.FC = () => {
     <MainContainer title="Contact | Cuong Nguyen" theme="dark">
       <div className="flex flex-col items-left mx-auto">
         <section className="py-20 my-20">
-          <HeadingTitle title={data.intro_title} />
+          <HeadingTitle title={data.intro_title} leftAlign={false} />
           <div className="pt-10 pb-30 text-18">
             <BodyText text={data.intro_description} />
           </div>
-          <HeadingTitle title={data.contacts_title} />
+          <HeadingTitle title={data.contacts_title} leftAlign={false} />
           <ContactList />
         </section>
       </div>
