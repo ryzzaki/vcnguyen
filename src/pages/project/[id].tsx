@@ -29,7 +29,7 @@ const ProjectDetailPage = () => {
       } | Cuong Nguyen`}
       theme="dark"
     >
-      <div className="flex flex-col md:flex-row py-5">
+      <div className="flex flex-col md:flex-row py-10">
         {project ? (
           <ProjectDetail
             title={project?.data.title}

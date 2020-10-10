@@ -1,8 +1,9 @@
 import React from 'react';
-import { RichText, RichTextBlock } from 'prismic-reactjs';
+import { RichTextBlock } from 'prismic-reactjs';
 import BodyText from './slices/BodyText';
 import { ArrowRight } from '../assets/icons';
 import { useRouter } from 'next/dist/client/router';
+import HeadingTitle from './slices/HeadingTitle';
 
 type PostPreviewProps = {
   id: string;
@@ -28,14 +29,14 @@ const PostPreview: React.FC<PostPreviewProps> = ({
   return (
     <div
       key={id}
-      className="flex flex-col shadow-lg pt-10 mb-10 px-10 hover:bg-verylightgrey hover:bg-opacity-25 cursor-auto rounded transition duration-300 ease-in-out"
+      className="flex flex-col shadow-lg pt-10 mb-20 px-10 hover:bg-verylightgrey hover:bg-opacity-25 cursor-auto rounded transition duration-300 ease-in-out"
     >
       <div className="flex flex-col md:flex-row py-5">
         <span
-          className="font-semibold text-20 md:text-32 hover:underline cursor-pointer"
+          className="hover:underline cursor-pointer"
           onClick={() => handleClick(uid as string)}
         >
-          <RichText render={title} />
+          <HeadingTitle title={title} />
         </span>
         <span className="md:ml-auto text-14 text-lightgrey">
           {new Date(dateCreated).toDateString()}

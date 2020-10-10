@@ -1,7 +1,8 @@
 import React from 'react';
-import { RichText, RichTextBlock } from 'prismic-reactjs';
+import { RichTextBlock } from 'prismic-reactjs';
 import BodyText from './slices/BodyText';
 import SliceZone from './slices/SliceZone';
+import HeadingTitle from './slices/HeadingTitle';
 
 type BlogPostProps = {
   title: RichTextBlock[];
@@ -20,9 +21,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
   body,
 }: BlogPostProps) => (
   <div className="py-20">
-    <div className="font-bold text-32">
-      <RichText render={title} />
-    </div>
+    <HeadingTitle title={title} />
     <div className="break-words">
       <BodyText text={description} />
     </div>

@@ -1,8 +1,9 @@
 import React from 'react';
-import { RichText, RichTextBlock } from 'prismic-reactjs';
+import { RichTextBlock } from 'prismic-reactjs';
 import BodyText from './slices/BodyText';
 import SliceZone from './slices/SliceZone';
 import Link from 'next/link';
+import HeadingTitle from './slices/HeadingTitle';
 
 type ProjectDetailProps = {
   title: RichTextBlock[];
@@ -37,9 +38,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
   body,
 }: ProjectDetailProps) => (
   <div className="py-20 w-full">
-    <div className="font-bold text-32">
-      <RichText render={title} />
-    </div>
+    <HeadingTitle title={title} />
     <div className="flex justify-center py-10">
       <img
         src={thumbnail.url}

@@ -2,9 +2,10 @@ import MainContainer from '../../components/containers/MainContainer';
 import React, { useEffect, useState } from 'react';
 import { PrismicClient, PrismicQuery } from '../api/prismic';
 import { Document as DataDoc } from 'prismic-javascript/types/documents';
-import { RichText, RichTextBlock } from 'prismic-reactjs';
+import { RichTextBlock } from 'prismic-reactjs';
 import BodyText from '../../components/slices/BodyText';
 import ProjectPreview from '../../components/ProjectPreview';
+import HeadingTitle from '../../components/slices/HeadingTitle';
 
 const ProjectsPage: React.FC = () => {
   const [pageData, setPageData] = useState({
@@ -41,17 +42,13 @@ const ProjectsPage: React.FC = () => {
     <MainContainer title="Projects | Cuong Nguyen" theme="dark">
       <div className="flex flex-col items-left">
         <section className="py-20 my-20">
-          <div className="font-semibold py-10 text-24 md:text-32">
-            <RichText render={pageData.intro_title} />
-          </div>
+          <HeadingTitle title={pageData.intro_title} />
           <div className="py-10 text-18 md:text-24">
             <BodyText text={pageData.intro_description} />
           </div>
         </section>
-        <section className="pb-20 my-20">
-          <div className="font-semibold py-10 text-24 md:text-32">
-            <RichText render={pageData.projects_title} />
-          </div>
+        <section className="py-20 my-20">
+          <HeadingTitle title={pageData.projects_title} />
           {projectData.map((project) => (
             <ProjectPreview
               key={project.id}

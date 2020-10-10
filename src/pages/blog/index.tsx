@@ -22,7 +22,7 @@ const BlogPage: React.FC = () => {
 
   return (
     <MainContainer title="Blog | Cuong Nguyen" theme="dark">
-      <div className="flex flex-col items-left mr-auto pb-20 mb-20">
+      <div className="flex flex-col items-left mr-auto py-20 mb-20">
         {data.map((post) => (
           <PostPreview
             key={post.id}
