@@ -6,7 +6,7 @@ import CodeSnippet from './CodeSnippet';
 type SliceZoneProps = {
   body: {
     slice_type: 'code' | 'rich_text';
-    items: [];
+    primary: [];
   }[];
 };
 
@@ -19,11 +19,11 @@ const SliceZone: React.FC<SliceZoneProps> = ({ body }: SliceZoneProps) => (
             return (
               <CodeSnippet
                 key={i}
-                markdownContent={content.items?.pop()?.code_slice?.pop()?.text}
+                markdownContent={content.primary.code_slice.pop()?.text}
               />
             );
           case 'rich_text':
-            return <BodyText key={i} text={content.items?.pop()?.text_slice} />;
+            return <BodyText key={i} text={content.primary.text_slice} />;
           default:
             return null;
         }

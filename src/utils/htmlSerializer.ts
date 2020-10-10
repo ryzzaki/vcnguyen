@@ -14,6 +14,23 @@ export const htmlSerializer = (
   key: string
 ): DetailedReactHTMLElement<any, HTMLElement> | null => {
   let props = {};
+  const codeInLine = [
+    'typescript',
+    'javascript',
+    'python',
+    'java',
+    'bash',
+    'docker',
+    'yaml',
+    'markdown',
+    'jsx',
+    'tsx',
+    'sql',
+    'json',
+    'xml',
+    'css',
+    'markup',
+  ];
 
   switch (type) {
     case Elements.heading1: // Heading 1
@@ -175,14 +192,49 @@ export const htmlSerializer = (
       return React.createElement('a', propsWithUniqueKey(props, key), children);
 
     case Elements.label: // Label
-      props = element.data
-        ? Object.assign({ ...props }, { className: element.data.label })
-        : { ...props };
-      return React.createElement(
-        'span',
-        propsWithUniqueKey(props, key),
-        children
-      );
+      if (codeInLine.includes(element.data.label)) {
+        return React.createElement(
+          'span',
+          propsWithUniqueKey(
+            { className: 'inline rounded bg-darkgrey p-5 mx-2 text-14' },
+            key
+          ),
+          React.createElement(
+            'code',
+            propsWithUniqueKey(
+              { className: `language-${element.data.label}` },
+              key
+            ),
+            children
+          )
+        );
+      } else if (element.data.label === 'quote') {
+        return React.createElement(
+          'blockquote',
+          propsWithUniqueKey({ className: 'py-10 bg-black' }, key),
+          children
+        );
+      } else if (element.data.label === 'highlight') {
+        return React.createElement(
+          'span',
+          propsWithUniqueKey(
+            {
+              className: 'font-heading text-black p-3 mx-2 bg-white rounded',
+            },
+            key
+          ),
+          children
+        );
+      } else {
+        props = element.data
+          ? Object.assign({ ...props }, { className: element.data.label })
+          : { ...props };
+        return React.createElement(
+          'span',
+          propsWithUniqueKey(props, key),
+          children
+        );
+      }
 
     case Elements.span: // Span
       return content

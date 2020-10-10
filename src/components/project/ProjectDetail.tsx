@@ -25,7 +25,7 @@ type ProjectDetailProps = {
   };
   body: {
     slice_type: 'code' | 'rich_text';
-    items: [];
+    primary: [];
   }[];
   tags: string[];
 };
@@ -67,12 +67,12 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
         Project Init on {new Date(projectInit).toDateString()}
       </div>
     </div>
-    <div className="py-10 text-14 font-semibold">
+    <div className="py-10 text-14 md:text-18 font-semibold">
       Project URL 👉
       <Link href={projectUrl.url}>
         <a
           target={projectUrl.target ?? ''}
-          className="px-14 hover:text-lightblue transition duration-300 ease-in-out"
+          className="px-14 hover:underline hover:text-lightblue transition duration-300 ease-in-out"
         >
           {projectUrl.url}
         </a>

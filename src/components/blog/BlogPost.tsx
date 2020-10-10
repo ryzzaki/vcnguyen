@@ -11,7 +11,7 @@ type BlogPostProps = {
   dateCreated: Date;
   body: {
     slice_type: 'code' | 'rich_text';
-    items: [];
+    primary: [];
   }[];
   tags: string[];
 };
