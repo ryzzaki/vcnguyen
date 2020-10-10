@@ -17,7 +17,7 @@ const MainContainer: React.FC<ContainerProps> = ({
   toggleNav = true,
 }: ContainerProps) => (
   <div
-    className={`font-roboto text-verylightgrey bg-${
+    className={`font-main text-verylightgrey bg-${
       theme === 'light' ? 'white' : 'mirage'
     }`}
   >

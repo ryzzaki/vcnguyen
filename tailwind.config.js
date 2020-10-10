@@ -135,6 +135,8 @@ module.exports = {
     fontSize: sizes,
     fontFamily: {
       roboto: ['Roboto', 'sans-serif'],
+      main: ['IBMPlexSans', 'sans-serif'],
+      heading: ['IBMPlexSansBold', 'sans-serif'],
     },
     extend: {
       spacing: sizes,

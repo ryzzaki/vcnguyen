@@ -33,7 +33,7 @@ const IndexPage: React.FC = () => {
       <div className="flex flex-col items-left mx-auto">
         <section className="py-20 my-20">
           <HeadingTitle title={data.intro_title} />
-          <div className="py-10 text-18 md:text-24">
+          <div className="py-10 text-center md:text-left text-20 md:text-24">
             <BodyText text={data.intro_description} />
           </div>
         </section>

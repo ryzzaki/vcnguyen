@@ -6,6 +6,18 @@
 
 @import 'prismjs/themes/prism-tomorrow.css';
 
+@font-face {
+  font-family: IBMPlexSans;
+  font-display: swap;
+  src: url('../fonts/IBMPlexSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IBMPlexSansBold;
+  font-display: swap;
+  src: url('../fonts/IBMPlexSans-Bold.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
 }

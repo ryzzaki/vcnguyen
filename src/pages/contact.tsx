@@ -30,7 +30,7 @@ const ContactPage: React.FC = () => {
       <div className="flex flex-col items-left mx-auto">
         <section className="py-20 my-20">
           <HeadingTitle title={data.intro_title} />
-          <div className="pt-10 pb-30 text-18 md:text-24">
+          <div className="pt-10 pb-30 text-18">
             <BodyText text={data.intro_description} />
           </div>
           <HeadingTitle title={data.contacts_title} />

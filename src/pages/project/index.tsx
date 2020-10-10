@@ -43,7 +43,7 @@ const ProjectsPage: React.FC = () => {
       <div className="flex flex-col items-left">
         <section className="py-20 my-20">
           <HeadingTitle title={pageData.intro_title} />
-          <div className="py-10 text-18 md:text-24">
+          <div className="py-10 text-18">
             <BodyText text={pageData.intro_description} />
           </div>
         </section>
