@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import MainContainer from '../../components/containers/MainContainer';
 import { PrismicClient } from '../api/prismic';
-import PostLoader from '../../components/PostLoader';
-import ProjectDetail from '../../components/ProjectDetail';
+import PostLoader from '../../components/utils/PostLoader';
+import ProjectDetail from '../../components/project/ProjectDetail';
 import { Document as DataDoc } from 'prismic-javascript/types/documents';
 import { RichText } from 'prismic-reactjs';
 
@@ -32,13 +32,14 @@ const ProjectDetailPage = () => {
       <div className="flex flex-col md:flex-row py-10">
         {project ? (
           <ProjectDetail
-            title={project?.data.title}
-            thumbnail={project?.data.project_thumbnail}
-            description={project?.data.description}
-            projectInit={project?.data.project_init}
-            dateCreated={project?.data.created_at}
-            projectUrl={project?.data.project_url}
-            body={project?.data.body}
+            title={project.data.title}
+            thumbnail={project.data.project_thumbnail}
+            description={project.data.description}
+            projectInit={project.data.project_init}
+            dateCreated={project.data.created_at}
+            projectUrl={project.data.project_url}
+            body={project.data.body}
+            tags={project.tags}
           />
         ) : (
           <PostLoader />

@@ -2,7 +2,7 @@ import MainContainer from '../../components/containers/MainContainer';
 import React, { useEffect, useState } from 'react';
 import { PrismicClient, PrismicQuery } from '../api/prismic';
 import { Document as DataDoc } from 'prismic-javascript/types/documents';
-import PostPreview from '../../components/PostPreview';
+import BlogPreview from '../../components/blog/BlogPreview';
 
 const BlogPage: React.FC = () => {
   const [data, setData] = useState<DataDoc[]>([]);
@@ -24,10 +24,11 @@ const BlogPage: React.FC = () => {
     <MainContainer title="Blog | Cuong Nguyen" theme="dark">
       <div className="flex flex-col items-left mr-auto py-20 mb-20">
         {data.map((post) => (
-          <PostPreview
+          <BlogPreview
             key={post.id}
             id={post.id}
             uid={post.uid}
+            tags={post.tags}
             title={post.data.title}
             description={post.data.description}
             dateCreated={post.data.created_at}

@@ -4,7 +4,7 @@ import { PrismicClient, PrismicQuery } from '../api/prismic';
 import { Document as DataDoc } from 'prismic-javascript/types/documents';
 import { RichTextBlock } from 'prismic-reactjs';
 import BodyText from '../../components/slices/BodyText';
-import ProjectPreview from '../../components/ProjectPreview';
+import ProjectPreview from '../../components/project/ProjectPreview';
 import HeadingTitle from '../../components/slices/HeadingTitle';
 
 const ProjectsPage: React.FC = () => {
@@ -54,6 +54,7 @@ const ProjectsPage: React.FC = () => {
               key={project.id}
               id={project.id}
               uid={project.uid}
+              tags={project.tags}
               title={project.data.title}
               thumbnail={project.data.project_thumbnail}
               description={project.data.description}

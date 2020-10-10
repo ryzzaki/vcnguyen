@@ -1,9 +1,10 @@
 import React from 'react';
 import { RichTextBlock } from 'prismic-reactjs';
-import BodyText from './slices/BodyText';
-import { ArrowRight } from '../assets/icons';
+import BodyText from '../slices/BodyText';
+import { ArrowRight } from '../../assets/icons';
 import { useRouter } from 'next/dist/client/router';
-import HeadingTitle from './slices/HeadingTitle';
+import HeadingTitle from '../slices/HeadingTitle';
+import Tag from '../utils/Tag';
 
 type ProjectPreviewProps = {
   id: string;
@@ -19,12 +20,14 @@ type ProjectPreviewProps = {
   };
   description: RichTextBlock[];
   projectInit: Date;
+  tags: string[];
 };
 
 const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   id,
   uid,
   title,
+  tags,
   thumbnail,
   description,
   projectInit,
@@ -62,6 +65,11 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
       </div>
       <div className="py-5 break-words">
         <BodyText text={description} />
+        <div className="flex flex-row flex-wrap">
+          {tags.map((tag) => (
+            <Tag key={tag} tag={tag} />
+          ))}
+        </div>
         <div
           className="flex flex-row justify-end font-semibold cursor-pointer"
           onClick={() => handleClick(uid as string)}

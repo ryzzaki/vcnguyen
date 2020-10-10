@@ -1,9 +1,10 @@
 import React from 'react';
 import { RichTextBlock } from 'prismic-reactjs';
-import BodyText from './slices/BodyText';
-import SliceZone from './slices/SliceZone';
+import BodyText from '../slices/BodyText';
+import SliceZone from '../slices/SliceZone';
 import Link from 'next/link';
-import HeadingTitle from './slices/HeadingTitle';
+import HeadingTitle from '../slices/HeadingTitle';
+import Tag from '../utils/Tag';
 
 type ProjectDetailProps = {
   title: RichTextBlock[];
@@ -26,6 +27,7 @@ type ProjectDetailProps = {
     slice_type: 'code' | 'rich_text';
     items: [];
   }[];
+  tags: string[];
 };
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({
@@ -36,6 +38,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
   dateCreated,
   projectUrl,
   body,
+  tags,
 }: ProjectDetailProps) => (
   <div className="py-20 w-full">
     <HeadingTitle title={title} />
@@ -51,16 +54,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
     <div className="break-words">
       <BodyText text={description} />
     </div>
-    <div className="flex flex-row">
-      <div className="mr-auto">
+    <div className="flex flex-row flex-wrap">
+      {tags.map((tag) => (
+        <Tag key={tag} tag={tag} />
+      ))}
+    </div>
+    <div className="flex flex-col md:flex-row">
+      <div className="text-12 md:text-14 md:pb-10">
         Posted on {new Date(dateCreated).toDateString()}
       </div>
-      <div className="ml-auto">
-        Created on {new Date(projectInit).toDateString()}
+      <div className="text-12 md:text-14 md:pb-10 md:ml-auto">
+        Project Init on {new Date(projectInit).toDateString()}
       </div>
     </div>
-    <div className="py-10 font-semibold">
-      Try it out yourself 👉
+    <div className="py-10 text-14 font-semibold">
+      Project URL 👉
       <Link href={projectUrl.url}>
         <a
           target={projectUrl.target ?? ''}
@@ -70,7 +78,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
         </a>
       </Link>
     </div>
-    <div>
+    <div className="pt-10 pb-30">
       <SliceZone body={body} />
     </div>
   </div>
