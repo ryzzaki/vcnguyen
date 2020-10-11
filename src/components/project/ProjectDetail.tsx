@@ -65,7 +65,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
         First Commit on {new Date(projectInit).toDateString()}
       </div>
     </div>
-    <div className="py-10 text-14 md:text-18 font-semibold">
+    <div className="truncate py-10 text-14 md:text-18 font-semibold">
       Project URL 👉
       <Link href={projectUrl.url}>
         <a
