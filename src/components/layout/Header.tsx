@@ -7,14 +7,14 @@ const Header: React.FC = () => (
     <div className="flex flex-wrap items-center justify-center text-14 md:text-20 border-b">
       <div className="flex font-bold pr-15 md:pr-40 md:mr-auto">
         <Link href="/">
-          <a className="flex flex-row transition duration-300 ease-in-out hover:text-lightblue">
+          <a className="flex flex-row transition duration-300 ease-in-out text-offwhite hover:text-teal">
             <UserIcon className="mr-5" />
             Cuong Nguyen
           </a>
         </Link>
       </div>
       <ul className="flex py-10">
-        <li className="mr-15 pl-5 md:mr-30 transition duration-300 ease-in-out hover:text-lightblue">
+        <li className="mr-15 pl-5 md:mr-30 transition duration-300 ease-in-out hover:text-teal">
           <Link href="/blog">
             <a className="flex flex-row items-center">
               <OpenBook className="mr-5" />
@@ -22,7 +22,7 @@ const Header: React.FC = () => (
             </a>
           </Link>
         </li>
-        <li className="mr-15 pl-5 md:mr-30 transition duration-300 ease-in-out hover:text-lightblue">
+        <li className="mr-15 pl-5 md:mr-30 transition duration-300 ease-in-out hover:text-teal">
           <Link href="/project">
             <a className="flex flex-row items-center">
               <Terminal className="mr-5" />
@@ -30,7 +30,7 @@ const Header: React.FC = () => (
             </a>
           </Link>
         </li>
-        <li className="pl-5 transition duration-300 ease-in-out hover:text-lightblue">
+        <li className="pl-5 transition duration-300 ease-in-out hover:text-teal">
           <Link href="/contact">
             <a className="flex flex-row items-center">
               <Send className="mr-5" />

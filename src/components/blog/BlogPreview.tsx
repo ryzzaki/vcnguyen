@@ -26,13 +26,13 @@ const BlogPreview: React.FC<PostPreviewProps> = ({
   const router = useRouter();
 
   const handleClick = (id: string) => {
-    router.push(`/blog/${id}`);
+    router.push(`/blog/${id}`).then(() => window.scrollTo(0, 0));
   };
 
   return (
     <div
       key={id}
-      className="flex flex-col shadow-lg pt-10 pb-15 px-10 mb-20 hover:bg-verylightgrey hover:bg-opacity-25 cursor-auto rounded transition duration-300 ease-in-out"
+      className="flex flex-col shadow-lg pt-10 pb-15 px-10 mb-20 hover:bg-verylightgrey hover:bg-opacity-10 cursor-auto rounded transition duration-300 ease-in-out"
     >
       <div className="flex flex-col md:flex-row py-5">
         <span
@@ -56,7 +56,9 @@ const BlogPreview: React.FC<PostPreviewProps> = ({
           className="flex flex-row justify-end font-semibold cursor-pointer"
           onClick={() => handleClick(uid as string)}
         >
-          <span className="hover:underline">Read More</span>{' '}
+          <span className="font-heading hover:underline hover:text-teal transition duration-300 ease-in-out">
+            Read More
+          </span>{' '}
           <ArrowRight className="ml-5" />
         </div>
       </div>

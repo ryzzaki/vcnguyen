@@ -70,7 +70,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
       <Link href={projectUrl.url}>
         <a
           target={projectUrl.target ?? ''}
-          className="px-14 hover:underline hover:text-lightblue transition duration-300 ease-in-out"
+          className="px-14 hover:underline hover:text-teal transition duration-300 ease-in-out"
         >
           {projectUrl.url}
         </a>

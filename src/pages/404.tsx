@@ -3,7 +3,7 @@ import React from 'react';
 
 const NotFoundErrorPage: React.FC = () => (
   <MainContainer title="Page Not Found :( | Cuong Nguyen" theme="dark">
-    <div className="text-center text-lightblue font-heading text-26 md:text-34 p-10">
+    <div className="text-center text-teal font-heading text-26 md:text-34 p-10">
       FOUR-O'-FOUR
     </div>
     <div className="text-center font-heading text-26 md:text-34 p-10">

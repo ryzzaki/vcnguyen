@@ -13,7 +13,7 @@ const HeadingTitle: React.FC<HeadingTitleProps> = ({
   <div
     className={`font-heading text-${
       leftAlign ? 'left' : 'center'
-    } md:text-left py-10 text-24 md:text-36`}
+    } text-offwhite md:text-left py-10 text-24 md:text-36`}
   >
     <RichText render={title} />
   </div>

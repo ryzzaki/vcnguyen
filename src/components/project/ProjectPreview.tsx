@@ -35,13 +35,13 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   const router = useRouter();
 
   const handleClick = (id: string) => {
-    router.push(`/project/${id}`);
+    router.push(`/project/${id}`).then(() => window.scrollTo(0, 0));
   };
 
   return (
     <div
       key={id}
-      className="flex flex-col shadow-lg py-20 mb-20 px-10 hover:bg-verylightgrey hover:bg-opacity-25 cursor-auto rounded transition duration-300 ease-in-out"
+      className="flex flex-col shadow-lg py-20 mb-20 px-10 hover:bg-verylightgrey hover:bg-opacity-10 cursor-auto rounded transition duration-300 ease-in-out"
     >
       <div className="flex flex-col md:flex-row py-5">
         <span
@@ -72,7 +72,9 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           className="flex flex-row justify-end font-semibold cursor-pointer"
           onClick={() => handleClick(uid as string)}
         >
-          <span className="hover:underline">Read More</span>{' '}
+          <span className="font-heading hover:underline hover:text-teal transition duration-300 ease-in-out">
+            Read More
+          </span>{' '}
           <ArrowRight className="ml-5" />
         </div>
       </div>

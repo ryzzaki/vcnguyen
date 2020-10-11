@@ -92,6 +92,8 @@ const flex = {
 
 const scales = {
   0: '0',
+  10: '.10',
+  15: '.15',
   25: '.25',
   50: '.5',
   75: '.75',
@@ -126,12 +128,12 @@ module.exports = {
       transparent: 'transparent',
       black: '#000',
       white: '#fff',
-      grey: '#5c595f',
-      lightgrey: '#95949c',
-      verylightgrey: '#edf2f6',
-      mirage: '#1a202c',
-      lightblue: '#0063b5',
+      offwhite: '#edf2f6',
       darkgrey: '#2d2d2d',
+      lightgrey: '#95949c',
+      verylightgrey: '#a7b6c7',
+      mirage: '#1a202c',
+      teal: '#21e6c1',
     },
     fontSize: sizes,
     fontFamily: {
@@ -141,6 +143,7 @@ module.exports = {
     },
     extend: {
       spacing: sizes,
+      opacity: scales,
     },
     maxHeight: sizes,
     maxWidth: sizes,

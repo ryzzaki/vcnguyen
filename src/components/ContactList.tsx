@@ -5,35 +5,35 @@ import { Github, Instagram, LinkedIn, Mail, Twitter } from '../assets/icons';
 const socials = [
   {
     icon: (
-      <LinkedIn className="transform scale-150 hover:scale-200 transition duration-300" />
+      <LinkedIn className="transform scale-150 hover:scale-200 transition duration-300 stroke-current text-verylightgrey hover:text-teal" />
     ),
     link: 'https://www.linkedin.com/in/viet-cuong-nguyen/',
     alt: `Let's get serious on LinkedIn`,
   },
   {
     icon: (
-      <Mail className="transform scale-150 hover:scale-200 transition duration-300" />
+      <Mail className="transform scale-150 hover:scale-200 transition duration-300 stroke-current text-verylightgrey hover:text-teal" />
     ),
     link: 'mailto:cuong.nguyen@outlook.cz',
     alt: 'Send me a love letter',
   },
   {
     icon: (
-      <Github className="transform scale-150 hover:scale-200 transition duration-300" />
+      <Github className="transform scale-150 hover:scale-200 transition duration-300 stroke-current text-verylightgrey hover:text-teal" />
     ),
     link: 'https://github.com/ryzzaki',
     alt: 'Check out the source code',
   },
   {
     icon: (
-      <Twitter className="transform scale-150 hover:scale-200 transition duration-300" />
+      <Twitter className="transform scale-150 hover:scale-200 transition duration-300 stroke-current text-verylightgrey hover:text-teal" />
     ),
     link: 'https://twitter.com/vcngng',
     alt: 'Read my dumb Tweets',
   },
   {
     icon: (
-      <Instagram className="transform scale-150 hover:scale-200 transition duration-300" />
+      <Instagram className="transform scale-150 hover:scale-200 transition duration-300 stroke-current text-verylightgrey hover:text-teal" />
     ),
     link: 'https://www.instagram.com/cng_ng/',
     alt: 'See my personal life?',

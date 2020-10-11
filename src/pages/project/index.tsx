@@ -6,13 +6,14 @@ import { RichTextBlock } from 'prismic-reactjs';
 import BodyText from '../../components/slices/BodyText';
 import ProjectPreview from '../../components/project/ProjectPreview';
 import HeadingTitle from '../../components/slices/HeadingTitle';
+import PostLoader from '../../components/utils/PostLoader';
 
 const ProjectsPage: React.FC = () => {
-  const [pageData, setPageData] = useState({
-    intro_title: [] as RichTextBlock[],
-    intro_description: [] as RichTextBlock[],
-    projects_title: [] as RichTextBlock[],
-  });
+  const [pageData, setPageData] = useState<{
+    intro_title: RichTextBlock[];
+    intro_description: RichTextBlock[];
+    projects_title: RichTextBlock[];
+  }>();
 
   const [projectData, setProjectData] = useState<DataDoc[]>([]);
 
@@ -40,29 +41,33 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <MainContainer title="Projects | Cuong Nguyen" theme="dark">
-      <div className="flex flex-col items-left">
-        <section className="py-20 my-20">
-          <HeadingTitle title={pageData.intro_title} leftAlign={false} />
-          <div className="py-10 text-18">
-            <BodyText text={pageData.intro_description} />
-          </div>
-        </section>
-        <section className="py-20 my-20">
-          <HeadingTitle title={pageData.projects_title} leftAlign={false} />
-          {projectData.map((project) => (
-            <ProjectPreview
-              key={project.id}
-              id={project.id}
-              uid={project.uid}
-              tags={project.tags}
-              title={project.data.title}
-              thumbnail={project.data.project_thumbnail}
-              description={project.data.description}
-              projectInit={project.data.project_init}
-            />
-          ))}
-        </section>
-      </div>
+      {pageData ? (
+        <div className="flex flex-col items-left">
+          <section className="py-20 my-20">
+            <HeadingTitle title={pageData.intro_title} leftAlign={false} />
+            <div className="py-10 text-18">
+              <BodyText text={pageData.intro_description} />
+            </div>
+          </section>
+          <section className="py-20 my-20">
+            <HeadingTitle title={pageData.projects_title} leftAlign={false} />
+            {projectData.map((project) => (
+              <ProjectPreview
+                key={project.id}
+                id={project.id}
+                uid={project.uid}
+                tags={project.tags}
+                title={project.data.title}
+                thumbnail={project.data.project_thumbnail}
+                description={project.data.description}
+                projectInit={project.data.project_init}
+              />
+            ))}
+          </section>
+        </div>
+      ) : (
+        <PostLoader />
+      )}
     </MainContainer>
   );
 };

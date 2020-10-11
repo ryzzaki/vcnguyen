@@ -45,7 +45,8 @@ export const htmlSerializer = (
         'h2',
         propsWithUniqueKey(
           {
-            className: 'font-heading text-left pb-10 pt-30 text-20 md:text-32',
+            className:
+              'font-heading text-left pb-10 pt-30 text-20 text-offwhite md:text-32',
           },
           key
         ),
@@ -206,7 +207,7 @@ export const htmlSerializer = (
           {
             ...props,
             className:
-              'font-semibold underline hover:text-lightblue cursor-pointer transition duration-300 ease-in-out',
+              'font-semibold underline hover:text-teal cursor-pointer transition duration-300 ease-in-out',
           },
           key
         ),
@@ -244,7 +245,7 @@ export const htmlSerializer = (
           propsWithUniqueKey(
             {
               className:
-                'font-heading text-black p-3 mx-2 py-2 bg-white rounded',
+                'font-heading text-black p-3 mx-2 py-2 bg-offwhite rounded',
             },
             key
           ),
