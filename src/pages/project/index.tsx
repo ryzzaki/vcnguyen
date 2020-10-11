@@ -31,8 +31,8 @@ const ProjectsPage: React.FC = () => {
       setProjectData(
         res.results.sort(
           (a, b) =>
-            new Date(b.data.created_at).getTime() -
-            new Date(a.data.created_at).getTime()
+            new Date(b.data.project_init).getTime() -
+            new Date(a.data.project_init).getTime()
         )
       );
     });
