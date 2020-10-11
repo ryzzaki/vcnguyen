@@ -51,7 +51,7 @@ const ContactList: React.FC = () => (
                 className="flex tooltip hover:cursor-pointer justify-center"
                 target="_blank"
               >
-                <span className="tooltip-text bg-black rounded -mt-50 transition duration-300 ease-in-out">
+                <span className="tooltip-text text-offwhite bg-black rounded -mt-50 transition duration-300 ease-in-out">
                   {org.alt}
                 </span>
                 {org.icon}
