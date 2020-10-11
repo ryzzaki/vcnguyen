@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 const Footer: React.FC = () => (
-  <footer className="flex flex-col bg-mirage text-center items-center w-full py-25 px-10">
-    <div className="font-semibold text-white text-14">
+  <footer className="flex flex-col bg-mirage text-center items-center w-full py-25 mt-60 px-10">
+    <div className="font-semibold text-white text-12 md:text-14">
       Wow you made it to the very end 😮
     </div>
-    <div className="text-lightgrey text-14">
+    <div className="text-lightgrey text-12 md:text-14">
       &copy; 2020 by{' '}
       <Link href="https://www.instagram.com/cng_ng/">
         <a
@@ -27,7 +27,7 @@ const Footer: React.FC = () => (
       </Link>
       . All rights reserved.
     </div>
-    <div className="p-15 md:p-0 mt-10 md:mt-0 text-lightgrey text-10">
+    <div className="pb-15 pt-0 text-lightgrey text-10">
       MIT Licensed | Made with ♥️ using Next.js
     </div>
   </footer>
