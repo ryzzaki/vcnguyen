@@ -201,6 +201,7 @@ export const htmlSerializer = (
         'a',
         propsWithUniqueKey(
           {
+            ...props,
             className:
               'font-semibold underline hover:text-lightblue cursor-pointer transition duration-300 ease-in-out',
           },
