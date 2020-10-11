@@ -28,9 +28,15 @@ const MetaData: React.FC<MetaDataProps> = ({ title }: MetaDataProps) => (
       href="/static/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="description" content="Lorem Ipsum" />
+    <meta
+      name="description"
+      content="Welcome to my completely incoherent blog & portfolio site. Have fun."
+    />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Lorem Ipsum" />
+    <meta
+      property="og:description"
+      content="Welcome to my completely incoherent blog & portfolio site. Have fun."
+    />
     <meta property="og:locale" content="en_UK" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://vcnguyen.me" />
@@ -38,7 +44,7 @@ const MetaData: React.FC<MetaDataProps> = ({ title }: MetaDataProps) => (
       property="og:image"
       content="https://vcnguyen.me/static/favicon.png"
     />
-    <meta property="og:site_name" content="Portfolio" />
+    <meta property="og:site_name" content="Blog & Portfolio | Cuong Nguyen" />
   </Head>
 );
 
