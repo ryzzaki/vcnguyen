@@ -187,8 +187,11 @@ export const htmlSerializer = (
     case Elements.hyperlink: // Hyperlink
       const targetAttr = element.data.target
         ? { target: element.data.target }
+        : element.data.link_type === 'Web'
+        ? { target: '_blank' }
         : {};
-      const relAttr = element.data.target ? { rel: 'noopener' } : {};
+      const relAttr =
+        element.data.link_type === 'Web' ? { rel: 'noopener noreferrer' } : {};
       props = Object.assign(
         {
           ...props,
