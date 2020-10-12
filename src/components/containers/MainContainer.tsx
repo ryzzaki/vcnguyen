@@ -11,12 +11,6 @@ type ContainerProps = {
   toggleNav?: boolean;
 };
 
-declare global {
-  interface Window {
-    GA_INITIALIZED: boolean;
-  }
-}
-
 const MainContainer: React.FC<ContainerProps> = ({
   children,
   title = 'Cuong Nguyen',
