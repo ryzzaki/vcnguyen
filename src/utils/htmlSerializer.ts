@@ -239,7 +239,7 @@ export const htmlSerializer = (
           propsWithUniqueKey(
             {
               className:
-                'py-20 border-l-4 pl-25 border-teal bg-darkmirage rounded-sm',
+                'py-20 border-l-4 pl-25 pr-5 border-teal bg-darkmirage rounded-sm',
             },
             key
           ),
@@ -251,7 +251,7 @@ export const htmlSerializer = (
           propsWithUniqueKey(
             {
               className:
-                'font-heading text-black p-3 mx-2 py-2 bg-offwhite rounded',
+                'font-heading text-mirage p-3 mx-2 py-2 bg-offwhite rounded',
             },
             key
           ),
