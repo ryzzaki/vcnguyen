@@ -133,6 +133,7 @@ module.exports = {
       lightgrey: '#95949c',
       verylightgrey: '#a7b6c7',
       mirage: '#1a202c',
+      darkmirage: '#151a25',
       teal: '#21e6c1',
     },
     fontSize: sizes,

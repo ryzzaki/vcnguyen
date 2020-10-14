@@ -233,10 +233,16 @@ export const htmlSerializer = (
             children
           )
         );
-      } else if (element.data.label === 'quote') {
+      } else if (element.data.label === 'blockquote') {
         return React.createElement(
           'blockquote',
-          propsWithUniqueKey({ className: 'py-10 bg-black' }, key),
+          propsWithUniqueKey(
+            {
+              className:
+                'py-20 border-l-4 pl-25 border-teal bg-darkmirage rounded-sm',
+            },
+            key
+          ),
           children
         );
       } else if (element.data.label === 'highlight') {
