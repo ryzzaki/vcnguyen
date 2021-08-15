@@ -147,7 +147,8 @@ export const htmlSerializer = (
       const img = React.createElement('img', {
         src: element.url,
         alt: element.alt || '',
-        className: 'rounded-lg',
+        className:
+          'rounded-lg w-full md:w-auto mx-auto border-2 border-verylightgrey border-opacity-15',
       });
       return React.createElement(
         'p',
