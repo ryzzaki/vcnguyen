@@ -18,7 +18,8 @@ export { default as JavaScript } from './stack/javascript.svg';
 export { default as Heroku } from './stack/heroku.svg';
 
 // organizations
-export { default as Qmul } from './organization/qmul.svg';
+export { default as QMUL } from './organization/qmul.svg';
+export { default as UCL } from './organization/ucl.svg';
 export { default as Applifting } from './organization/applifting.svg';
 export { default as DXH } from './organization/dxh.svg';
 
